@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
-    "infragistics-grid-poc": {
+    "infragistics-poc": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -32,18 +32,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "infragistics-grid-poc:build"
+            "browserTarget": "infragistics-poc:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "infragistics-grid-poc:build:production"
+              "browserTarget": "infragistics-poc:build:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "infragistics-grid-poc",
+  "defaultProject": "infragistics-poc",
   "cli": {
     "analytics": "485e7bd5-77df-4faa-a4a1-69f60f3ea4e6"
   }
