@@ -1,15 +1,24 @@
 {
-  "name": "infragistics-poc",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@steven-sanchez-altera/infragistics-grid-element",
+  "version": "1.0.0",
   "description": "Angular 20 Elements POC wrapping Infragistics Web Components Grid as a shareable custom element.",
   "type": "module",
+  "main": "dist/browser/main.js",
+  "module": "dist/browser/main.js",
+  "types": "infragistics-grid-element.d.ts",
+  "files": [
+    "dist/browser/",
+    "dist/themes/",
+    "infragistics-grid-element.d.ts",
+    "README.md"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build -c production && node tools/postbuild.mjs",
     "build:watch": "ng build --watch",
-    "serve:dist": "npx http-server ./dist -p 4209 -c-1"
+    "serve:dist": "npx http-server ./dist -p 4209 -c-1",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@angular/animations": "^20.0.0",
@@ -41,8 +50,24 @@
     "web-components",
     "infragistics",
     "igniteui",
-    "grid"
+    "grid",
+    "custom-element",
+    "data-grid"
   ],
   "author": "Steven Sanchez",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steven-sanchez-altera/infragistics-poc.git"
+  },
+  "homepage": "https://infragistics-poc-ichz.vercel.app",
+  "bugs": {
+    "url": "https://github.com/steven-sanchez-altera/infragistics-poc/issues"
+  },
+  "peerDependencies": {
+    "igniteui-webcomponents": "^4.8.0",
+    "igniteui-webcomponents-core": "^6.2.1",
+    "igniteui-webcomponents-data-grids": "^6.2.1",
+    "igniteui-webcomponents-grids": "^6.1.0"
+  }
 }
