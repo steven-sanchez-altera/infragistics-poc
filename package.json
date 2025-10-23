@@ -1,6 +1,6 @@
 {
   "name": "@steven-sanchez-altera/infragistics-grid-element",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Angular 20 Elements POC wrapping Infragistics Web Components Grid as a shareable custom element.",
   "type": "module",
   "main": "dist/browser/main.js",
