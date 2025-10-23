@@ -1,9 +1,13 @@
 {
-  "outputDirectory": "dist/browser",
+  "outputDirectory": "dist",
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/demo/index.html"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/$1"
     }
   ]
 }
