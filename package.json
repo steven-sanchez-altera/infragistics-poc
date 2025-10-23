@@ -1,0 +1,48 @@
+{
+  "name": "infragistics-poc",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Angular 20 Elements POC wrapping Infragistics Web Components Grid as a shareable custom element.",
+  "type": "module",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build -c production && node tools/postbuild.mjs",
+    "build:watch": "ng build --watch",
+    "serve:dist": "npx http-server ./dist -p 4209 -c-1"
+  },
+  "dependencies": {
+    "@angular/animations": "^20.0.0",
+    "@angular/common": "^20.0.0",
+    "@angular/compiler": "^20.0.0",
+    "@angular/core": "^20.0.0",
+    "@angular/elements": "^20.0.0",
+    "@angular/platform-browser": "^20.0.0",
+    "@angular/platform-browser-dynamic": "^20.0.0",
+    "igniteui-webcomponents": "^4.8.0",
+    "igniteui-webcomponents-core": "^6.2.1",
+    "igniteui-webcomponents-data-grids": "^6.2.1",
+    "igniteui-webcomponents-grids": "^6.1.0",
+    "rxjs": "^7.8.1",
+    "tslib": "^2.6.2",
+    "zone.js": "^0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^20.0.0",
+    "@angular/cli": "^20.0.0",
+    "@angular/compiler-cli": "^20.0.0",
+    "http-server": "^14.1.1",
+    "sass": "^1.79.5",
+    "typescript": "~5.8.0"
+  },
+  "keywords": [
+    "angular",
+    "angular-elements",
+    "web-components",
+    "infragistics",
+    "igniteui",
+    "grid"
+  ],
+  "author": "Steven Sanchez",
+  "license": "MIT"
+}
