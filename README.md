@@ -16,6 +16,7 @@ npm install @steven-sanchez-altera/infragistics-grid-element
 
 ### In HTML (Vanilla JavaScript)
 
+**Option 1: Full Bundle (Easiest)**
 ```html
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,7 @@ npm install @steven-sanchez-altera/infragistics-grid-element
   <!-- Use the custom element -->
   <infragistics-grid-element id="myGrid"></infragistics-grid-element>
   
-  <!-- Load the scripts -->
+  <!-- Load the full bundle -->
   <script src="node_modules/@steven-sanchez-altera/infragistics-grid-element/dist/browser/polyfills.js"></script>
   <script src="node_modules/@steven-sanchez-altera/infragistics-grid-element/dist/browser/main.js"></script>
   
@@ -45,6 +46,32 @@ npm install @steven-sanchez-altera/infragistics-grid-element
       },
       // ... more data
     ];
+  </script>
+</body>
+</html>
+```
+
+**Option 2: Modular Approach (Advanced)**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="node_modules/@steven-sanchez-altera/infragistics-grid-element/dist/themes/material.css">
+</head>
+<body>
+  <infragistics-grid-element id="myGrid"></infragistics-grid-element>
+  
+  <!-- Load modular files -->
+  <script type="module">
+    // Import just the utilities and sample data
+    import { defaultGridData, registerInfragisticsModules } from 
+      'node_modules/@steven-sanchez-altera/infragistics-grid-element/dist/infragistics-common.js';
+    
+    // Import the main component
+    import 'node_modules/@steven-sanchez-altera/infragistics-grid-element/dist/browser/main.js';
+    
+    // Use sample data or provide your own
+    document.getElementById('myGrid').data = defaultGridData;
   </script>
 </body>
 </html>

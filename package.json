@@ -9,6 +9,7 @@
   "files": [
     "dist/browser/",
     "dist/themes/",
+    "dist/infragistics-common.js",
     "infragistics-grid-element.d.ts",
     "README.md"
   ],

@@ -1,11 +1,13 @@
 # 🤖 GitHub Copilot Project Prompt
 
-## Project: `infragistics-grid-poc`
+## Project: `@steven-sanchez-altera/infragistics-grid-element`
 
 ### Goal
 
 Develop a **reusable Angular 20 web component** wrapping the **Infragistics Web Components Grid**, published as an independent **Angular Element** package for npm.  
-The component should work in any framework (Angular, React, or plain HTML).
+The component should work in any framework (Angular, React, Vue.js, or plain HTML).
+
+**✅ PUBLISHED**: This package is now live on npm as `@steven-sanchez-altera/infragistics-grid-element`
 
 ---
 
@@ -41,7 +43,7 @@ The component should work in any framework (Angular, React, or plain HTML).
 ### 🧱 Project Structure
 
 ```
-infragistics-grid-poc/
+infragistics-poc/
  ├─ src/
  │   ├─ app/
  │   │   ├─ components/infragistics-grid/
@@ -58,6 +60,9 @@ infragistics-grid-poc/
  │   ├─ browser/ (Angular build output)
  │   ├─ demo/ (generated demo page)
  │   └─ themes/ (copied CSS themes)
+ ├─ infragistics-grid-element.d.ts (TypeScript declarations)
+ ├─ .npmignore (npm publishing configuration)
+ ├─ vercel.json (Vercel deployment configuration)
  ├─ package.json
  ├─ tsconfig.json
  ├─ angular.json
@@ -124,6 +129,31 @@ Column mapping:
 
 ---
 
+### 📦 npm Package Details
+
+**Package Name**: `@steven-sanchez-altera/infragistics-grid-element`  
+**Current Version**: `1.0.0`  
+**Package Size**: 690.2 kB  
+**Includes**:
+- `dist/browser/` - Compiled Angular Elements bundle
+- `dist/themes/` - Infragistics Material theme CSS
+- `infragistics-grid-element.d.ts` - TypeScript declarations
+- `README.md` - Complete usage documentation
+
+**Usage in Projects**:
+```html
+<!-- HTML -->
+<script src="node_modules/@steven-sanchez-altera/infragistics-grid-element/dist/browser/main.js"></script>
+<link rel="stylesheet" href="node_modules/@steven-sanchez-altera/infragistics-grid-element/dist/themes/material.css">
+<infragistics-grid-element id="grid"></infragistics-grid-element>
+```
+
+```javascript
+// React/Vue/Angular
+import '@steven-sanchez-altera/infragistics-grid-element/dist/browser/main.js';
+import '@steven-sanchez-altera/infragistics-grid-element/dist/themes/material.css';
+```
+
 ### 🧰 Example Tasks for Copilot
 
 > You can type these directly into VS Code to guide Copilot:
@@ -136,21 +166,38 @@ Column mapping:
 - "Configure column types (`igc-date-time-column` for OrderDate, currency formatting for UnitPrice, boolean display for Discontinued)."
 - "Add column sorting and filtering capabilities to the product data grid."
 - "Implement custom cell templates for boolean values (Discontinued column) with icons or badges."
+- "Update package version and publish new features to npm."
+- "Add more input properties like height, width, auto-generate-columns to the component."
 
 ---
 
-### 🚀 Publishing
+### 🚀 Publishing & Deployment
 
+**✅ PUBLISHED TO NPM**: `@steven-sanchez-altera/infragistics-grid-element@1.0.0`
+
+**Development Workflow:**
 1. Build and verify demo
    ```bash
    npm run build
    npm run serve:dist
    ```
 2. Test locally at `http://127.0.0.1:4209/demo/`
-3. Publish to npm
-   ```bash
-   npm publish --access public
-   ```
+
+**Deployment:**
+- **Live Demo**: https://infragistics-poc-ichz.vercel.app
+- **npm Package**: https://www.npmjs.com/package/@steven-sanchez-altera/infragistics-grid-element
+- **Vercel**: Auto-deploys from main branch, configured with `vercel.json`
+
+**Updating the Package:**
+```bash
+npm version patch|minor|major  # Updates version
+npm publish                    # Publishes to npm (prepublishOnly runs build)
+```
+
+**Installation for Users:**
+```bash
+npm install @steven-sanchez-altera/infragistics-grid-element
+```
 
 ---
 

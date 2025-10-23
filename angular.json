@@ -24,9 +24,14 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": true
+              },
               "outputHashing": "none",
-              "sourceMap": false
+              "sourceMap": false,
+              "namedChunks": true
             }
           }
         },
