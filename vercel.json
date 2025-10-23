@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/browser",
   "rewrites": [
     {
       "source": "/(.*)",
